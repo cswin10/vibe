@@ -93,6 +93,78 @@
     window.addEventListener('load', function() {
       document.body.classList.add('loaded');
     });
+    
+    // Form submission handler
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.querySelector('form[name="contact"]');
+      
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Show loading state
+        const submitBtn = form.querySelector('.submit-btn');
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = 'SENDING...';
+        submitBtn.disabled = true;
+        
+        // Create form data
+        const formData = new FormData(form);
+        
+        // Submit to Netlify
+        fetch('/', {
+          method: 'POST',
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams(formData).toString()
+        })
+        .then(() => {
+          // Show success message
+          showThankYouMessage();
+          form.reset();
+          const submitBtn = form.querySelector('.submit-btn');
+          submitBtn.textContent = originalText;
+          submitBtn.disabled = false;
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+          // Reset button on error
+          submitBtn.textContent = originalText;
+          submitBtn.disabled = false;
+          alert('There was an error submitting your form. Please try again.');
+        });
+      });
+    });
+    
+    function showThankYouMessage() {
+      // Create thank you modal
+      const modal = document.createElement('div');
+      modal.className = 'thank-you-modal';
+      modal.innerHTML = `
+        <div class="thank-you-content">
+          <div class="thank-you-icon">✨</div>
+          <h2>Thank You!</h2>
+          <p>We're so excited to hear from you! Your application has been received and we'll get back to you within 48 hours to book your consultation call.</p>
+          <p>In the meantime, feel free to follow us on social media for daily inspiration and behind-the-scenes content!</p>
+          <button class="thank-you-close" onclick="closeThankYouMessage()">Got It!</button>
+        </div>
+      `;
+      
+      document.body.appendChild(modal);
+      
+      // Trigger animation
+      setTimeout(() => {
+        modal.classList.add('show');
+      }, 10);
+    }
+    
+    function closeThankYouMessage() {
+      const modal = document.querySelector('.thank-you-modal');
+      modal.classList.remove('show');
+      setTimeout(() => {
+        modal.remove();
+        // Optionally redirect to home page
+        // window.location.href = 'index.html';
+      }, 300);
+    }
   </script>
   <script src="js/script.js" defer></script>
 </head>
@@ -146,7 +218,7 @@
                 <!-- Right Side - Contact Form -->
                 <div class="contact-form-wrapper">
                     <div class="form-header">
-                        <h2>Tell Me A LITTLE About You!</h2>
+                        <h2>Tell Us A LITTLE About You!</h2>
                     </div>
                     
                     <form name="contact" method="POST" data-netlify="true" class="contact-form">
@@ -183,12 +255,12 @@
                         
                         <div class="form-group">
                             <label for="website">Website*</label>
-                            <input type="url" id="website" name="website" placeholder="Please insert website link" required>
+                            <input type="url" id="website" name="website" placeholder="Please insert website link">
                         </div>
                         
                         <div class="form-group">
                             <label for="instagram">Instagram*</label>
-                            <input type="url" id="instagram" name="instagram" placeholder="Please insert Instagram link" required>
+                            <input type="url" id="instagram" name="instagram" placeholder="Please insert Instagram link">
                         </div>
                         
                         <!-- Tell Me About Your Biz Section -->
@@ -304,7 +376,7 @@
                             
                             <div class="form-group">
                                 <label for="excitement">On a scale of 1 to 1 million, how excited are you about working together? ;)*</label>
-                                <input type="text" id="excitement" name="excitement" placeholder="1 million bajillion I hope ;)" required>
+                                <input type="text" id="excitement" name="excitement" placeholder="The most excited ever!!! ;)" required>
                             </div>
                         </div>
                         
