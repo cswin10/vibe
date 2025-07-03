@@ -33,19 +33,28 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-// Dropdown functionality for services
+// Dropdown functionality for services and FAQs
 function toggleDropdown(header) {
   const dropdownItem = header.parentElement;
   const isActive = dropdownItem.classList.contains('active');
   
-  // Close all dropdowns first
-  const allDropdowns = document.querySelectorAll('.dropdown-item');
-  allDropdowns.forEach(item => {
-    item.classList.remove('active');
-  });
+  // Determine if this is a service dropdown or FAQ item
+  const isServiceDropdown = dropdownItem.classList.contains('dropdown-item');
+  const isFaqItem = dropdownItem.classList.contains('faq-item');
   
-  // If the clicked dropdown wasn't active, open it
-  if (!isActive) {
-    dropdownItem.classList.add('active');
+  if (isServiceDropdown) {
+    // For service dropdowns: close all service dropdowns first
+    const allServiceDropdowns = document.querySelectorAll('.dropdown-item');
+    allServiceDropdowns.forEach(item => {
+      item.classList.remove('active');
+    });
+    
+    // If the clicked dropdown wasn't active, open it
+    if (!isActive) {
+      dropdownItem.classList.add('active');
+    }
+  } else if (isFaqItem) {
+    // For FAQ items: simply toggle the clicked item (allow multiple open)
+    dropdownItem.classList.toggle('active');
   }
 }
