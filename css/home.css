@@ -268,3 +268,172 @@
   color: var(--black);
   line-height: 1.6;
 }
+
+/* MISSION SECTION */
+.mission-section {
+  background-color: var(--white);
+  padding: 100px 0;
+  border-top: 1px solid var(--black);
+  border-bottom: 1px solid var(--black);
+}
+
+.mission-content {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.mission-image {
+  flex: 1;
+}
+
+.mission-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mission-image img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.mission-text {
+  flex: 1;
+  text-align: left;
+}
+
+.mission-text h1 {
+  font-size: 3rem;
+  margin-bottom: 50px;
+  color: var(--black);
+}
+
+.mission-text h4 {
+  font-size: 1.3rem;
+  margin-bottom: 45px;
+  color: var(--black);
+  line-height: 1.5;
+}
+
+.mission-text p {
+  font-size: 1.1rem;
+  color: var(--black);
+  line-height: 1.6;
+}
+
+/* STORY SECTION */
+.story-section {
+  background-color: var(--white);
+  padding: 100px 0;
+  position: relative;
+}
+
+.story-images {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.profile-1 {
+  position: absolute;
+  top: 250px;
+  left: 50px;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  opacity: 0.8;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  pointer-events: auto;
+}
+
+.profile-1:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+.profile-2 {
+  position: absolute;
+  bottom: 250px;
+  right: 50px;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  opacity: 0.8;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  pointer-events: auto;
+}
+
+.profile-2:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+.story-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.story-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 30px;
+  color: var(--black);
+  letter-spacing: 0.1em;
+}
+
+.story-content h4 {
+  font-size: 1.4rem;
+  margin-bottom: 50px;
+  color: var(--black);
+  letter-spacing: 0.05em;
+  line-height: 1.4;
+}
+
+.story-text {
+  margin-bottom: 50px;
+}
+
+.story-text p {
+  font-size: 1.1rem;
+  color: var(--black);
+  line-height: 1.7;
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.story-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  color: var(--black);
+  font-style: italic;
+}
+
+.story-content .btn {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  border: 2px solid var(--black);
+  background-color: transparent;
+  color: var(--black);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.story-content .btn:hover {
+  background-color: var(--black);
+  color: var(--white);
+}
