@@ -298,6 +298,9 @@ p {
 }
 
 .footer-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   margin-bottom: 60px;
   padding-bottom: 30px;

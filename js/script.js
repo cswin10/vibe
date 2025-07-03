@@ -218,9 +218,16 @@ document.addEventListener('DOMContentLoaded', function() {
   // Improve image loading experience
   const lazyImages = document.querySelectorAll('img[loading="lazy"]');
   lazyImages.forEach(img => {
-    img.addEventListener('load', function() {
-      this.classList.add('loaded');
-    });
+    if (img.complete && img.naturalWidth !== 0) {
+      img.classList.add('loaded');
+    } else {
+      img.addEventListener('load', function() {
+        this.classList.add('loaded');
+      });
+      img.addEventListener('error', function() {
+        this.classList.add('loaded'); // Prevents stuck at opacity 0 if image fails
+      });
+    }
   });
   
   // Preload next page on hover for better navigation
