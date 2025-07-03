@@ -132,15 +132,11 @@ p {
 
 /* Hamburger Animation */
 .hamburger.active div:nth-child(1) {
-  transform: rotate(-45deg) translate(-5px, 6px);
+  transform: rotate(-45deg) translate(-2px, 4px);
 }
 
 .hamburger.active div:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger.active div:nth-child(3) {
-  transform: rotate(45deg) translate(-5px, -6px);
+  transform: rotate(45deg) translate(-2px, -4px);
 }
 
 .nav-menu {
@@ -157,20 +153,6 @@ p {
 
 .nav-menu.active {
   right: 0;
-}
-
-.nav-close {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 2rem;
-  cursor: pointer;
-  color: #000;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .nav-content {

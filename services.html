@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Vibehaus Media</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/services.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+        </div>
+    </header>
+
+    <nav class="nav-menu" id="navMenu">
+        <div class="nav-content">
+            <div class="nav-logo">
+                <img src="assets/logo2.png" alt="Vibehaus Media Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="overlay"></div>
+        <div class="hero-text">
+            <h1>Our Services</h1>
+            <h2>The Strategy-Driven Way to Grow (Without Guessing)</h2>
+            <p>We're not just here to make things look pretty.<br>
+            We build social strategies that align with your goals, create content that converts, and handle engagement that builds community so your growth isn't a fluke, it's a formula.</p>
+            <a href="contact.html" class="hero-cta">Ready to get started?</a>
+        </div>
+        <div class="scroll-arrow">
+            <span>&#8595;</span>
+        </div>
+    </section>
+
+    <!-- Onboarding Flow Section -->
+    <section class="onboarding-section">
+        <div class="container">
+            <h2 class="section-title">The Vibehaus Onboarding Flow</h2>
+            <div class="onboarding-grid">
+                <div class="onboarding-step">
+                    <div class="step-number">01</div>
+                    <h3>The Inquiry</h3>
+                    <p class="step-intro">Dreaming of working with us? We're flattered.</p>
+                    <p>Fill out the quick inquiry form and tell us a bit about your brand, your goals, and what's on your "must-fix-this-ASAP" list.</p>
+                </div>
+                
+                <div class="onboarding-step">
+                    <div class="step-number">02</div>
+                    <h3>The Consult</h3>
+                    <p class="step-intro">Once we get your form, you'll receive a link to schedule a free consult within 48 hours.</p>
+                    <p>We'll chat about your brand, your vision, and how Vibehaus can make it all feel less overwhelming (and way more strategic).</p>
+                </div>
+                
+                <div class="onboarding-step">
+                    <div class="step-number">03</div>
+                    <h3>The Proposal</h3>
+                    <p class="step-intro">After the consult, we'll send a personalized proposal with package details, pricing, and a few samples, so you know exactly what we're bringing to the table.</p>
+                    <p>No pressure, just clarity. (And maybe a few goosebumps.)</p>
+                </div>
+                
+                <div class="onboarding-step">
+                    <div class="step-number">04</div>
+                    <h3>The Kick-Off</h3>
+                    <p class="step-intro">Proposal approved? We're diving in!</p>
+                    <p>We'll start with a strategy session to get to know your biz inside and out.</p>
+                    <p>Then comes your first round of content, custom, aligned, and made to convert.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Details Section -->
+    <section class="services-details-section">
+        <!-- Service 1: Branding -->
+        <div class="service-item">
+            <div class="service-image">
+                <img src="assets/services1.jpg" alt="Branding Services">
+            </div>
+            <div class="service-content">
+                <h1>Branding</h1>
+                <p>Your brand? It's so much more than a logo, it's the heartbeat of your business and how people feel when they see you online and off. We're here to help you bring that vision to life, making sure every piece like your visuals, your messaging, your vibe feels just right and works seamlessly across social and beyond.</p>
+                
+                <div class="service-dropdowns">
+                    <div class="dropdown-item">
+                        <div class="dropdown-header" onclick="toggleDropdown(this)">
+                            <span>What we offer</span>
+                            <span class="dropdown-arrow">+</span>
+                        </div>
+                        <div class="dropdown-content">
+                            <p><strong>Full Brand Design:</strong> We'll build your brand from scratch, using strategy + social insights to craft an identity that's not just pretty but powerful. Logos, color palettes, typography, messaging, it's the whole package, created to make you unforgettable and instantly recognizable.</p>
+                            <p><strong>Brand Refresh:</strong> Love your brand but want to give it a glow-up? We'll refine and refresh what's already working, like your logo, colors, and fonts so it feels modern, polished, and totally aligned with your goals.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="dropdown-item">
+                        <div class="dropdown-header" onclick="toggleDropdown(this)">
+                            <span>Who's it for</span>
+                            <span class="dropdown-arrow">+</span>
+                        </div>
+                        <div class="dropdown-content">
+                            <p>Business owners who are ready to show up and stand out in their niche.</p>
+                            <p>Entrepreneurs who want their online presence to feel as pro as their in-person vibe.</p>
+                            <p>Anyone feeling like their brand is missing that spark and needs a refresh or reimagination.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="dropdown-item">
+                        <div class="dropdown-header" onclick="toggleDropdown(this)">
+                            <span>What's the investment?</span>
+                            <span class="dropdown-arrow">+</span>
+                        </div>
+                        <div class="dropdown-content">
+                            <p>The Brand starts at $997, with a 50% deposit required to kick things off, and the remaining 50% due upon completion. Projects typically wrap in a month (depending on revisions + capacity).</p>
+                            <p><strong>Heads up:</strong> Extra revisions beyond the included amount? $25 each.</p>
+                            <p>Want to go bigger? Add-ons like extra logos, or custom social media assets are available to level up your brand even more.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="contact.html" class="service-cta">Inquire about this service</a>
+            </div>
+        </div>
+
+        <!-- Service 2: Placeholder -->
+        <div class="service-item reverse">
+            <div class="service-image">
+                <img src="assets/services2.jpg" alt="Service 2">
+            </div>
+            <div class="service-content">
+                <h1>Service 2</h1>
+                <p>Service 2 content coming soon...</p>
+                <a href="contact.html" class="service-cta">Inquire about this service</a>
+            </div>
+        </div>
+
+        <!-- Service 3: Placeholder -->
+        <div class="service-item">
+            <div class="service-image">
+                <img src="assets/services3.jpg" alt="Service 3">
+            </div>
+            <div class="service-content">
+                <h1>Service 3</h1>
+                <p>Service 3 content coming soon...</p>
+                <a href="contact.html" class="service-cta">Inquire about this service</a>
+            </div>
+        </div>
+
+        <!-- Service 4: Placeholder -->
+        <div class="service-item reverse">
+            <div class="service-image">
+                <img src="assets/services4.jpg" alt="Service 4">
+            </div>
+            <div class="service-content">
+                <h1>Service 4</h1>
+                <p>Service 4 content coming soon...</p>
+                <a href="contact.html" class="service-cta">Inquire about this service</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="assets/logo.png" alt="Vibehaus Media Logo" />
+            </div>
+            
+            <div class="footer-sections">
+                <div class="footer-section">
+                    <h4>Pages</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="cookies.html">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/vibehausmediaco/" target="_blank" aria-label="Instagram">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.tiktok.com/@vibehausmediaco" target="_blank" aria-label="TikTok">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+                            </svg>
+                        </a>
+                        <a href="mailto:hello@vibehausmedia.co" aria-label="Email">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Vibehaus Media. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

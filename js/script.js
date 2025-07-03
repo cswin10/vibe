@@ -32,3 +32,20 @@ document.addEventListener('DOMContentLoaded', function() {
     link.addEventListener('click', toggleMenu);
   });
 });
+
+// Dropdown functionality for services
+function toggleDropdown(header) {
+  const dropdownItem = header.parentElement;
+  const isActive = dropdownItem.classList.contains('active');
+  
+  // Close all dropdowns first
+  const allDropdowns = document.querySelectorAll('.dropdown-item');
+  allDropdowns.forEach(item => {
+    item.classList.remove('active');
+  });
+  
+  // If the clicked dropdown wasn't active, open it
+  if (!isActive) {
+    dropdownItem.classList.add('active');
+  }
+}
