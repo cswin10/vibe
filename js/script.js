@@ -35,22 +35,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Dropdown functionality for services and FAQs
 function toggleDropdown(header) {
-  const dropdownItem = header.parentElement;
-  const isActive = dropdownItem.classList.contains('active');
-  
-  // Determine if this is a service dropdown or FAQ item
+  // Find the closest parent with either .dropdown-item or .faq-item
+  let dropdownItem = header.closest('.dropdown-item, .faq-item');
+  if (!dropdownItem) return;
+
   const isServiceDropdown = dropdownItem.classList.contains('dropdown-item');
   const isFaqItem = dropdownItem.classList.contains('faq-item');
-  
+
   if (isServiceDropdown) {
     // For service dropdowns: close all service dropdowns first
     const allServiceDropdowns = document.querySelectorAll('.dropdown-item');
     allServiceDropdowns.forEach(item => {
       item.classList.remove('active');
     });
-    
     // If the clicked dropdown wasn't active, open it
-    if (!isActive) {
+    if (!dropdownItem.classList.contains('active')) {
       dropdownItem.classList.add('active');
     }
   } else if (isFaqItem) {

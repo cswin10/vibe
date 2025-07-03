@@ -557,20 +557,12 @@ img {
 }
 
 .dropdown-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
+  display: none;
   padding-bottom: 0;
-  margin-top: 0;
-  opacity: 0;
-  visibility: hidden;
 }
-
 .dropdown-item.active .dropdown-content {
-  max-height: none;
+  display: block;
   padding-bottom: 20px;
-  opacity: 1;
-  visibility: visible;
 }
 
 .dropdown-content p {
@@ -844,15 +836,14 @@ img {
   transform: rotate(45deg);
 }
 
+
+/* FAQ dropdown fix: always show content, but hide with visibility/height for animation and accessibility */
 .faq-item .dropdown-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
+  display: none;
   padding-bottom: 0;
 }
-
 .faq-item.active .dropdown-content {
-  max-height: none;
+  display: block;
   padding-bottom: 25px;
 }
 
