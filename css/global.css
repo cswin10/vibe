@@ -1,0 +1,121 @@
+/* FONTS */
+@font-face {
+  font-family: 'Butler Ultra Light';
+  src: url('../assets/Butler-UltraLight.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* COLOR PALETTE */
+:root {
+  --cream: #EFE6DD;
+  --beige: #C8B895;
+  --sage: #B3BEB4;
+  --black: #000000;
+  --white: #ffffff;
+}
+
+/* TYPOGRAPHY */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Butler Ultra Light', sans-serif;
+  font-weight: 200;
+  line-height: 1.2;
+  margin: 0;
+}
+
+p, span, div, a, li, button, input, textarea, label {
+  font-family: 'Inter', sans-serif;
+}
+
+p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* BUTTONS */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: 1px solid var(--black);
+  background-color: transparent;
+  color: var(--black);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+/* LAYOUT */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* NAVBAR BASE (we’ll expand later) */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  z-index: 1000;
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Butler Ultra Light', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+
+.hamburger {
+  position: absolute;
+  right: 40px;
+  top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 30px;
+  height: 2px;
+  background-color: var(--black);
+}

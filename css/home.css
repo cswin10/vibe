@@ -1,0 +1,270 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  background-image: url('../assets/hero-image.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.096); /* optional tint */
+  z-index: 1;
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Butler Ultra Light', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 200;
+  color: var(--black);
+  top: -10px;
+  z-index: 999;
+}
+
+.logo img {
+  width: 250px; /* Adjust as needed */
+  height: auto;
+}
+
+.hamburger {
+  position: fixed;
+  right: 55px;
+  top: 55px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  color: white;
+  z-index: 999;
+}
+
+.hamburger div {
+  width: 30px;
+  height: 2px;
+  background-color: var(--white);
+}
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+  color: var(--white);
+  font-size: 2.5rem;
+  line-height: 1.4;
+  padding: 0 20px;
+  max-width: 1400px;
+  width: 1400px;
+}
+
+.hero-text strong {
+  font-weight: 600;
+}
+
+.hero-text em {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.scroll-arrow {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  animation: bounce 2s infinite;
+  width: 50px;
+  height: 50px;
+  border: 2px solid var(--black);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.scroll-arrow:hover {
+  border-color: var(--beige);
+  background-color: rgba(200, 184, 149, 0.1);
+}
+
+.scroll-arrow span {
+  color: var(--black);
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.scroll-arrow:hover span {
+  color: var(--beige);
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  40% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+  60% {
+    transform: translateX(-50%) translateY(-5px);
+  }
+}
+
+/* Navigation Menu Styles */
+.nav-menu {
+  position: fixed;
+  top: 0;
+  right: -300px; /* Hidden by default */
+  width: 300px;
+  height: 100vh;
+  background-color: var(--white);
+  z-index: 1001;
+  transition: right 0.3s ease;
+  overflow: hidden;
+}
+
+.nav-menu.active {
+  right: 0; /* Slide in when active */
+}
+
+.nav-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1002;
+}
+
+.nav-close span {
+  color: var(--black);
+  font-size: 30px;
+  font-weight: 300;
+  transition: color 0.3s ease;
+}
+
+.nav-close:hover span {
+  color: var(--beige);
+}
+
+.nav-content {
+  padding: 100px 40px 40px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-logo {
+  margin-bottom: 40px;
+}
+
+.nav-logo img {
+  width: 100px;
+  height: auto;
+}
+
+.nav-links {
+  list-style: none;
+  width: 100%;
+}
+
+.nav-links li {
+  margin: 0;
+  border-bottom: 1px solid var(--beige);
+}
+
+.nav-links li:last-child {
+  border-bottom: none;
+}
+
+.nav-links a {
+  display: block;
+  color: var(--black);
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  padding: 20px 0;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--beige);
+}
+
+/* Hamburger Animation */
+.hamburger.active div:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active div:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active div:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+.hamburger div {
+  transition: all 0.3s ease;
+}
+
+/* Overlay for menu */
+.nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.nav-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* STRATEGY SECTION */
+.strategy-section {
+  background-color: var(--white);
+  padding: 100px 0;
+  text-align: center;
+}
+
+.strategy-section h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: var(--black);
+}
+
+.strategy-section h4 {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  color: var(--black);
+}
+
+.strategy-section p {
+  font-size: 1.2rem;
+  color: var(--black);
+  line-height: 1.6;
+}
