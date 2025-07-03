@@ -154,29 +154,30 @@
 }
 
 .story-images {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1;
+  display: none; /* Hide on desktop, we'll use story-images-desktop instead */
 }
 
 .story-images-mobile {
   display: none;
 }
 
+.story-images-desktop {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 30px 0 50px 0;
+}
+
 .profile-1 {
-  position: absolute;
-  top: 250px;
-  left: 50px;
   width: 200px;
   height: 200px;
   object-fit: cover;
   border-radius: 50%;
-  opacity: 0.8;
+  opacity: 0.9;
   transition: transform 0.3s ease, opacity 0.3s ease;
   pointer-events: auto;
+  border: 3px solid var(--white);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .profile-1:hover {
@@ -185,16 +186,15 @@
 }
 
 .profile-2 {
-  position: absolute;
-  bottom: 250px;
-  right: 50px;
-  width: 180px;
-  height: 180px;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
   border-radius: 50%;
-  opacity: 0.8;
+  opacity: 0.9;
   transition: transform 0.3s ease, opacity 0.3s ease;
   pointer-events: auto;
+  border: 3px solid var(--white);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .profile-2:hover {
@@ -629,6 +629,10 @@
     font-size: 1.2rem;
   }
   
+  .story-images-desktop {
+    display: none; /* Hide desktop images on tablet */
+  }
+  
   .story-images-mobile {
     display: flex;
     justify-content: center;
@@ -636,19 +640,11 @@
     margin-bottom: 50px;
   }
   
-  .profile-1 {
+  .story-images-mobile .profile-1,
+  .story-images-mobile .profile-2 {
     position: relative;
     top: auto;
     left: auto;
-    transform: none;
-    width: 130px;
-    height: 130px;
-    border: 3px solid var(--white);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-  }
-  
-  .profile-2 {
-    position: relative;
     bottom: auto;
     right: auto;
     transform: none;
@@ -815,6 +811,10 @@
     margin-bottom: 30px;
   }
   
+  .story-images-desktop {
+    display: none; /* Hide desktop images on mobile */
+  }
+  
   .story-images-mobile {
     display: flex;
     justify-content: center;
@@ -833,19 +833,11 @@
     margin-bottom: 20px;
   }
   
-  .profile-1 {
+  .story-images-mobile .profile-1,
+  .story-images-mobile .profile-2 {
     position: relative;
     top: auto;
     left: auto;
-    transform: none;
-    width: 110px;
-    height: 110px;
-    border: 3px solid var(--white);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  }
-  
-  .profile-2 {
-    position: relative;
     bottom: auto;
     right: auto;
     transform: none;

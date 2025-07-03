@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic Meta Tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <!-- SEO Meta Tags -->
+  <title>Contact - Vibehaus Media | Let's Make This Official</title>
+  <meta name="description" content="Ready to transform your brand's digital presence? Contact Vibehaus Media for social media management, content creation, and brand strategy. Let's create content that works.">
+  <meta name="keywords" content="contact vibehaus media, social media management inquiry, brand strategy consultation, content creation services, instagram management">
+  <meta name="author" content="Vibehaus Media">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.vibehausmedia.co/contact.html">
+  <meta property="og:title" content="Contact - Vibehaus Media | Let's Make This Official">
+  <meta property="og:description" content="Ready to transform your brand's digital presence? Contact Vibehaus Media for social media management, content creation, and brand strategy.">
+  <meta property="og:image" content="https://www.vibehausmedia.co/assets/contact-hero.jpg">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://www.vibehausmedia.co/contact.html">
+  <meta name="twitter:title" content="Contact - Vibehaus Media | Let's Make This Official">
+  <meta name="twitter:description" content="Ready to transform your brand's digital presence? Contact Vibehaus Media for social media management, content creation, and brand strategy.">
+  <meta name="twitter:image" content="https://www.vibehausmedia.co/assets/contact-hero.jpg">
+  
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="manifest" href="assets/site.webmanifest">
+  <link rel="mask-icon" href="assets/safari-pinned-tab.svg" color="#000000">
+  <link rel="shortcut icon" href="assets/favicon.ico">
+  <meta name="theme-color" content="#ffffff">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.vibehausmedia.co/contact.html">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/contact.css">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Preload Critical Assets -->
+  <link rel="preload" href="assets/contact-hero.jpg" as="image" type="image/jpeg">
+  <link rel="preload" href="assets/logo.png" as="image" type="image/png">
+  
+  <!-- JavaScript -->
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+        </div>
+    </header>
+
+    <nav class="nav-menu" id="navMenu">
+        <div class="nav-content">
+            <div class="nav-logo">
+                <img src="assets/logo2.png" alt="Vibehaus Media Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="overlay"></div>
+        <div class="hero-text">
+            <h1>Let's Make This Official</h1>
+            <p>You're one step closer to content that actually works (and looks good doing it).<br>
+            Fill out the form below and we'll be in touch within 48 hours to book your application call.<br>
+            We're pumped to hear about your brand and even more excited to help it thrive.</p>
+        </div>
+        <div class="scroll-arrow">
+            <span>&#8595;</span>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-layout">
+                <!-- Left Side - Contact Image -->
+                <div class="contact-image">
+                    <img src="assets/contact.jpg" alt="Vibehaus Media Contact">
+                </div>
+                
+                <!-- Right Side - Contact Form -->
+                <div class="contact-form-wrapper">
+                    <div class="form-header">
+                        <h2>Tell Me A LITTLE About You!</h2>
+                    </div>
+                    
+                    <form name="contact" method="POST" data-netlify="true" class="contact-form">
+                        <input type="hidden" name="form-name" value="contact" />
+                        
+                        <!-- Personal Information -->
+                        <div class="form-group">
+                            <div class="form-row">
+                                <div class="form-field">
+                                    <label for="firstName">First Name*</label>
+                                    <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+                                </div>
+                                <div class="form-field">
+                                    <label for="lastName">Last Name*</label>
+                                    <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address*</label>
+                            <input type="email" id="email" name="email" placeholder="Email Address" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="location">Where are you located (please include your timezone)?*</label>
+                            <input type="text" id="location" name="location" placeholder="City, State (Timezone)" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="businessName">Business Name*</label>
+                            <input type="text" id="businessName" name="businessName" placeholder="Please insert your business name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="website">Website*</label>
+                            <input type="url" id="website" name="website" placeholder="Please insert website link" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="instagram">Instagram*</label>
+                            <input type="url" id="instagram" name="instagram" placeholder="Please insert Instagram link" required>
+                        </div>
+                        
+                        <!-- Tell Me About Your Biz Section -->
+                        <div class="form-section">
+                            <h3>Tell Me About Your Biz</h3>
+                            
+                            <div class="form-group">
+                                <label for="services">What services do you offer or products do you sell?*</label>
+                                <textarea id="services" name="services" placeholder="Be loud & proud in this answer!" rows="4" required></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="currentMarketing">What do your current marketing efforts look like and why are you looking for a Social Media Manager?*</label>
+                                <textarea id="currentMarketing" name="currentMarketing" placeholder="Are you running your socials on your own? What are you hoping for in hiring a SMM?" rows="4" required></textarea>
+                            </div>
+                        </div>
+                        
+                        <!-- What You're Looking For Section -->
+                        <div class="form-section">
+                            <h3>What You're Looking For</h3>
+                            
+                            <div class="form-group">
+                                <label>What service(s) are you looking for?*</label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="servicesLookingFor[]" value="Social Media Management">
+                                        <span class="checkbox-custom"></span>
+                                        Social Media Management
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="servicesLookingFor[]" value="Pinterest Management">
+                                        <span class="checkbox-custom"></span>
+                                        Pinterest Management
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="servicesLookingFor[]" value="Email Marketing">
+                                        <span class="checkbox-custom"></span>
+                                        Email Marketing
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="servicesLookingFor[]" value="The Design Studio">
+                                        <span class="checkbox-custom"></span>
+                                        The Design Studio
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="servicesLookingFor[]" value="The Express Brand">
+                                        <span class="checkbox-custom"></span>
+                                        The Express Brand
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>What platform(s) are you looking for us to manage?</label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="platforms[]" value="Instagram">
+                                        <span class="checkbox-custom"></span>
+                                        Instagram
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="platforms[]" value="TikTok (Upon Approval)">
+                                        <span class="checkbox-custom"></span>
+                                        TikTok (Upon Approval)
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="platforms[]" value="Pinterest">
+                                        <span class="checkbox-custom"></span>
+                                        Pinterest
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="platforms[]" value="Email">
+                                        <span class="checkbox-custom"></span>
+                                        Email
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="otherServices">Something you're looking for isn't on the list? Drop it here!</label>
+                                <textarea id="otherServices" name="otherServices" placeholder="ie One time projects, collaborations, etc" rows="3"></textarea>
+                            </div>
+                        </div>
+                        
+                        <!-- The Extra Deets Section -->
+                        <div class="form-section">
+                            <h3>The Extra Deets</h3>
+                            
+                            <div class="form-group">
+                                <label for="howDidYouFind">How did you find us?*</label>
+                                <select id="howDidYouFind" name="howDidYouFind" required>
+                                    <option value="">Select</option>
+                                    <option value="Instagram">Instagram</option>
+                                    <option value="TikTok">TikTok</option>
+                                    <option value="Pinterest">Pinterest</option>
+                                    <option value="Google Search">Google Search</option>
+                                    <option value="Referral">Referral</option>
+                                    <option value="Previous Client">Previous Client</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="budget">What's your monthly budget?*</label>
+                                <select id="budget" name="budget" required>
+                                    <option value="">Please be open & honest with your answer!</option>
+                                    <option value="Under $2,000">Under $2,000</option>
+                                    <option value="$2,000 - $5,000">$2,000 - $5,000</option>
+                                    <option value="$5,000 - $10,000">$5,000 - $10,000</option>
+                                    <option value="$10,000+">$10,000+</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="excitement">On a scale of 1 to 1 million, how excited are you about working together? ;)*</label>
+                                <input type="text" id="excitement" name="excitement" placeholder="1 million bajillion I hope ;)" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-submit">
+                            <button type="submit" class="btn submit-btn">I'M SO READY!</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="assets/logo.png" alt="Vibehaus Media Logo" />
+            </div>
+            
+            <div class="footer-sections">
+                <div class="footer-section">
+                    <h4>Pages</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="cookies.html">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/vibehausmediaco/" target="_blank" aria-label="Instagram">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.40s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.tiktok.com/@vibehausmediaco" target="_blank" aria-label="TikTok">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+                            </svg>
+                        </a>
+                        <a href="mailto:hello@vibehausmedia.co" aria-label="Email">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Vibehaus Media. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
