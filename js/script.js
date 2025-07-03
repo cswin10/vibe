@@ -212,3 +212,44 @@ function showComingSoonContent() {
     </div>
   `;
 }
+
+// Performance optimizations
+document.addEventListener('DOMContentLoaded', function() {
+  // Improve image loading experience
+  const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+  lazyImages.forEach(img => {
+    img.addEventListener('load', function() {
+      this.classList.add('loaded');
+    });
+  });
+  
+  // Preload next page on hover for better navigation
+  let preloadedPages = new Set();
+  const navLinks = document.querySelectorAll('nav a[href]');
+  navLinks.forEach(link => {
+    link.addEventListener('mouseenter', function() {
+      const href = this.getAttribute('href');
+      if (!preloadedPages.has(href) && href.endsWith('.html')) {
+        const linkEl = document.createElement('link');
+        linkEl.rel = 'prefetch';
+        linkEl.href = href;
+        document.head.appendChild(linkEl);
+        preloadedPages.add(href);
+      }
+    });
+  });
+  
+  // Optimize scroll performance
+  let ticking = false;
+  function updateScrollEffects() {
+    // Add any scroll-based animations here if needed
+    ticking = false;
+  }
+  
+  window.addEventListener('scroll', function() {
+    if (!ticking) {
+      requestAnimationFrame(updateScrollEffects);
+      ticking = true;
+    }
+  });
+});

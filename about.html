@@ -40,6 +40,40 @@
   <link rel="canonical" href="https://www.vibehausmedia.co/about.html">
   
   <!-- CSS -->
+  <style>
+    /* Critical styles for above-the-fold content */
+    .hero {
+      position: relative;
+      height: 100vh;
+      background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('assets/about-hero.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: 1;
+    }
+    .hero-text {
+      position: relative;
+      z-index: 2;
+      color: white;
+      max-width: 800px;
+      padding: 0 20px;
+    }
+    /* Hide loading flash */
+    body { opacity: 0; transition: opacity 0.3s ease; }
+    body.loaded { opacity: 1; }
+  </style>
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/about.css">
   
@@ -49,10 +83,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   
   <!-- Preload Critical Assets -->
-  <link rel="preload" href="assets/about-hero.jpg" as="image" type="image/jpeg">
-  <link rel="preload" href="assets/logo.png" as="image" type="image/png">
+  <link rel="preload" href="assets/about-hero.jpg" as="image" type="image/jpeg" fetchpriority="high">
+  <link rel="preload" href="assets/logo.png" as="image" type="image/png" fetchpriority="high">
+  
+  <!-- Prefetch Next Page Assets -->
+  <link rel="prefetch" href="assets/services-hero.jpg" as="image" type="image/jpeg">
+  <link rel="prefetch" href="assets/portfolio-hero.jpg" as="image" type="image/jpeg">
+  <link rel="prefetch" href="assets/contact-hero.jpg" as="image" type="image/jpeg">
   
   <!-- JavaScript -->
+  <script>
+    // Remove loading state once page is ready
+    window.addEventListener('load', function() {
+      document.body.classList.add('loaded');
+    });
+  </script>
   <script src="js/script.js" defer></script>
 </head>
 <body>

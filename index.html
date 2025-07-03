@@ -58,6 +58,54 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   
   <!-- Critical CSS - Load synchronously -->
+  <style>
+    /* Critical styles for above-the-fold content */
+    .hero {
+      position: relative;
+      height: 100vh;
+      background-image: url('assets/hero-image.png');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: 1;
+    }
+    .logo {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: -10px;
+      z-index: 999;
+    }
+    .logo img {
+      width: 250px;
+      height: auto;
+    }
+    .hero-text {
+      position: relative;
+      z-index: 2;
+      color: white;
+      font-size: 2.5rem;
+      line-height: 1.4;
+      padding: 0 20px;
+      max-width: 1400px;
+      width: 1400px;
+    }
+    /* Hide loading flash */
+    body { opacity: 0; transition: opacity 0.3s ease; }
+    body.loaded { opacity: 1; }
+  </style>
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/home.css">
   
@@ -65,8 +113,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   
   <!-- Preload Critical Assets -->
-  <link rel="preload" href="assets/hero-image.png" as="image" type="image/png">
-  <link rel="preload" href="assets/logo.png" as="image" type="image/png">
+  <link rel="preload" href="assets/hero-image.png" as="image" type="image/png" fetchpriority="high">
+  <link rel="preload" href="assets/logo.png" as="image" type="image/png" fetchpriority="high">
+  <link rel="preload" href="assets/profile1.jpg" as="image" type="image/jpeg">
+  <link rel="preload" href="assets/profile2.jpg" as="image" type="image/jpeg">
+  <link rel="preload" href="assets/our-mission.jpg" as="image" type="image/jpeg">
+  
+  <!-- Prefetch Next Page Assets -->
+  <link rel="prefetch" href="assets/about-hero.jpg" as="image" type="image/jpeg">
+  <link rel="prefetch" href="assets/services-hero.jpg" as="image" type="image/jpeg">
+  <link rel="prefetch" href="assets/portfolio-hero.jpg" as="image" type="image/jpeg">
+  <link rel="prefetch" href="assets/contact-hero.jpg" as="image" type="image/jpeg">
   
   <!-- Schema.org Structured Data -->
   <script type="application/ld+json">
@@ -110,6 +167,30 @@
   </script>
   
   <!-- JavaScript - Load Deferred -->
+  <script>
+    // Remove loading state once page is ready
+    window.addEventListener('load', function() {
+      document.body.classList.add('loaded');
+    });
+    
+    // Preload next page on hover
+    let preloadedPages = new Set();
+    document.addEventListener('DOMContentLoaded', function() {
+      const navLinks = document.querySelectorAll('nav a[href]');
+      navLinks.forEach(link => {
+        link.addEventListener('mouseenter', function() {
+          const href = this.getAttribute('href');
+          if (!preloadedPages.has(href) && href.endsWith('.html')) {
+            const linkEl = document.createElement('link');
+            linkEl.rel = 'prefetch';
+            linkEl.href = href;
+            document.head.appendChild(linkEl);
+            preloadedPages.add(href);
+          }
+        });
+      });
+    });
+  </script>
   <script src="js/script.js" defer></script>
 </head>
 
@@ -169,7 +250,7 @@
     <div class="container">
       <div class="mission-content">
         <div class="mission-image">
-          <img src="assets/our-mission.jpg" alt="Our Mission" />
+          <img src="assets/our-mission.jpg" alt="Our Mission" loading="lazy" />
         </div>
         <div class="mission-text">
           <h1>Our mission</h1>
@@ -191,12 +272,12 @@
         <h1>OUR STORY</h1>
         <h4>MEET CHERYLNN + JOYCE | FOUNDERS OF VIBEHAUS MEDIA</h4>
         <div class="story-images-desktop">
-          <img src="assets/profile1.jpg" alt="Profile 1" class="profile-1" />
-          <img src="assets/profile2.jpg" alt="Profile 2" class="profile-2" />
+          <img src="assets/profile1.jpg" alt="Profile 1" class="profile-1" loading="lazy" />
+          <img src="assets/profile2.jpg" alt="Profile 2" class="profile-2" loading="lazy" />
         </div>
         <div class="story-images-mobile">
-          <img src="assets/profile1.jpg" alt="Profile 1" class="profile-1" />
-          <img src="assets/profile2.jpg" alt="Profile 2" class="profile-2" />
+          <img src="assets/profile1.jpg" alt="Profile 1" class="profile-1" loading="lazy" />
+          <img src="assets/profile2.jpg" alt="Profile 2" class="profile-2" loading="lazy" />
         </div>
         <div class="story-text">
           <p>We're two Singaporean creatives who packed our dreams (and winter coats) and moved to the UK, because why not build a business in a country where it rains 300 days a year?</p>
@@ -220,7 +301,7 @@
   <!-- IMAGE OVERLAY SECTION -->
   <section class="image-overlay-section">
     <div class="section-image">
-      <img src="assets/homepage1.jpg" alt="Homepage" />
+      <img src="assets/homepage1.jpg" alt="Homepage" loading="lazy" />
     </div>
     <div class="white-overlay-box">
       <h3>Let's keep it real</h3>
