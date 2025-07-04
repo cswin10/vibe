@@ -1,3 +1,10 @@
+/* Use heading font for nav menu links */
+.nav-links a {
+  font-family: 'Butler Ultra Light', 'Inter', Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
 /* FONTS */
 @font-face {
   font-family: 'Butler Ultra Light';
