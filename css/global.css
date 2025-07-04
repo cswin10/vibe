@@ -1,3 +1,40 @@
+/* Add top margin to service-content for mobile to separate text from border line */
+@media (max-width: 768px) {
+  .services-details-section .service-content {
+    margin-top: 24px !important;
+  }
+}
+/* Extra mobile padding for the 'not every brand needs full blown...' section and image below */
+@media (max-width: 768px) {
+  .services-details-section .service-item {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .services-details-section .service-content {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+    padding-top: 32px !important;
+    padding-bottom: 32px !important;
+  }
+  .services-details-section .service-image {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+    margin-bottom: 32px !important;
+  }
+}
+/* Mobile: Add more padding for special section and image below */
+@media (max-width: 768px) {
+  .services-details-section .service-item,
+  .services-details-section .service-content {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+  .services-details-section .service-image {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+    margin-bottom: 24px !important;
+  }
+}
 /* Use heading font for nav menu links */
 .nav-links a {
   font-family: 'Butler Ultra Light', 'Inter', Arial, Helvetica, sans-serif;
