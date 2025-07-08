@@ -680,7 +680,8 @@ img {
   }
   
   .service-content {
-    padding: 40px 20px;
+    padding: 16px 12px 10px 12px;
+    margin-top: -140px;
   }
   
   .service-content h1 {
