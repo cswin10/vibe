@@ -390,8 +390,8 @@
 
 /* CTA SECTION */
 .cta-section {
-  padding: 100px 0;
-  margin-top: 120px;
+  padding: 50px 0;
+  margin-top: 20px;
   background: #000;
   color: white;
   text-align: center;
@@ -483,7 +483,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 80px;
-  align-items: center;
+  align-items: stretch;
   margin-bottom: 100px;
 }
 
@@ -502,18 +502,26 @@
 .why-image img {
   width: 100%;
   height: 400px;
+  min-height: 400px;
+  max-height: 400px;
   object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
+.why-item:last-child {
+  margin-bottom: 0;
+}
+
+
 .why-text h3 {
   font-family: 'Butler Ultra Light', serif;
-  font-size: 2.5rem;
+  font-size: 3.2rem;
   font-weight: 300;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
   color: #000;
   line-height: 1.3;
+  text-align: center;
 }
 
 .why-text p {
@@ -529,13 +537,21 @@
   font-size: 1.5rem;
   font-style: italic;
   color: #000;
-  margin: 0;
-  padding-left: 30px;
-  border-left: 3px solid #000;
+  margin: 0 0 1rem 0;
+  padding-left: 0;
+  border-left: none;
   line-height: 1.4;
+  text-align: center;
 }
 
 /* RESPONSIVE DESIGN */
+@media (min-width: 1025px) {
+  .why-text h3 {
+    font-size: 3.2rem;
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+}
 @media (max-width: 1024px) {
   .hero-text h1 {
     font-size: 3rem;
@@ -778,12 +794,15 @@
   }
   
   .why-image img {
-    height: 300px;
-    max-width: 100%;
+    height: 250px;
+    margin-bottom: 1.5rem;
+  }
+  .why-text h3 {
+    font-size: 1.7rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
   }
   
-  .why-text {
-    text-align: left;
   }
   
   .why-text h3 {
@@ -799,9 +818,10 @@
   
   .why-text blockquote {
     font-size: 1.3rem;
-    padding-left: 20px;
-    text-align: left;
+    padding-left: 0;
+    text-align: center;
     margin-top: 1.5rem;
+    border-left: none;
   }
   
   /* CTA Section */
@@ -830,9 +850,17 @@
     padding: 18px 30px;
     text-align: center;
   }
-}
+
 
 @media (max-width: 480px) {
+  /* Increase margin below the first blockquote */
+  .why-item:first-child .why-text blockquote {
+    margin-bottom: 2.5rem;
+  }
+  /* Increase margin below the second image */
+  .why-item:nth-child(2) .why-image img {
+    margin-bottom: 2.5rem;
+  }
   .hero {
     min-height: 100vh;
     padding: 0 15px;
@@ -973,7 +1001,10 @@
   
   .why-item {
     gap: 25px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+  }
+  .why-item:last-child {
+    margin-bottom: 0 !important;
   }
   
   .why-item.reverse {

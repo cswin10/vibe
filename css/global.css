@@ -377,10 +377,12 @@ p {
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  text-align: center;
 }
 
 .footer-section ul {
   list-style: none;
+  text-align: center;
 }
 
 .footer-section ul li {
@@ -401,6 +403,7 @@ p {
   transition: color 0.3s ease;
   display: block;
   padding: 5px 0;
+  text-align: center;
 }
 
 .footer-section ul li a:hover {
@@ -412,6 +415,7 @@ p {
   gap: 15px;
   align-items: center;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .social-links a {
