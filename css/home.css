@@ -108,6 +108,12 @@
 
 .mission-image {
   flex: 1;
+  .keepitreal-content h3 {
+    margin-bottom: 24px !important;
+  }
+  .keepitreal-content h1 {
+    margin-bottom: 32px !important;
+  }
 }
 
 .mission-image img {
@@ -267,11 +273,12 @@
 
 /* IMAGE OVERLAY SECTION */
 .image-overlay-section {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-  margin-top: 100px;
-  border-top: 1px solid var(--black);
+position: relative;
+height: 100vh;
+overflow: hidden;
+margin-top: 100px;
+margin-bottom: 60px;
+border-top: 1px solid var(--black);
 }
 
 .section-image {
@@ -533,6 +540,14 @@
 
 /* Tablets */
 @media (max-width: 768px) {
+  .image-overlay-section .section-image {
+    display: none;
+  }
+  .keepitreal-cta {
+    display: block;
+    margin: 30px auto 0 auto !important;
+    text-align: center;
+  }
   .hero {
     background-size: cover;
     background-position: center center;
@@ -929,6 +944,45 @@
   .btn {
     padding: 12px 25px;
     font-size: 0.9rem;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 500px) {
+  .keepitreal-content h3 {
+    margin-bottom: 20px !important;
+  }
+  .keepitreal-content h1 {
+    margin-bottom: 28px !important;
+  }
+  .white-overlay-box {
+    display: none !important;
+  }
+  .image-overlay-section {
+    background: var(--white) !important;
+    position: relative;
+    height: auto !important;
+    min-height: 0 !important;
+    margin-top: 40px !important;
+    margin-bottom: 40px !important;
+    border-top: none !important;
+    overflow: visible;
+  }
+  .image-overlay-section .section-image {
+    display: none !important;
+  }
+  .keepitreal-content {
+    display: block;
+    padding: 50px 24px 40px 24px;
+    background: var(--white);
+    border-radius: 0;
+    box-shadow: none;
+    text-align: center;
+    margin-bottom: 40px;
+    margin-bottom: 32px !important;
+  }
+  .keepitreal-content .underline {
+    display: none !important;
   }
 }
 

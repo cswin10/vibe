@@ -204,6 +204,7 @@ img {
   padding: 100px 0 80px 0;
   background: white;
   text-align: center;
+  margin-top: 50px;
 }
 
 .portfolio-intro-section .container {
@@ -220,6 +221,7 @@ img {
   line-height: 1.2;
   letter-spacing: -0.02em;
 }
+
 
 .portfolio-intro-section p {
   font-size: 1.3rem;
