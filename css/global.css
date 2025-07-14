@@ -419,6 +419,7 @@ p {
 }
 
 .social-links a {
+    margin-top: 10px !important;
   color: var(--black);
   transition: color 0.3s ease, transform 0.3s ease;
   display: flex;
@@ -487,6 +488,10 @@ p {
     padding: 20px 0;
   }
   
+  .footer-logo {
+    margin-top: -70px !important;
+    padding-bottom: 10px !important;
+  }
   .footer-section:last-child {
     border-bottom: none;
   }
@@ -503,6 +508,7 @@ p {
   .hamburger div {
     width: 20px;
   }
+  
   
   .scroll-arrow {
     bottom: 15px;

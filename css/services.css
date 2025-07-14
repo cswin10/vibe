@@ -675,6 +675,9 @@ img {
 }
 
 @media (max-width: 480px) {
+  .service-cta {
+    margin-bottom: -100px !important;
+  }
   .service-image {
     height: 300px;
   }

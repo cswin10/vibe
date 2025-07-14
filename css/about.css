@@ -853,9 +853,6 @@
 
 
 @media (max-width: 480px) {
-  .cta-section {
-    margin-top: 0 !important;
-  }
   /* Increase margin below the first blockquote */
   .why-item:first-child .why-text blockquote {
     margin-bottom: 2.5rem;
@@ -1074,10 +1071,10 @@
 }
 
 @media (max-width: 360px) {
-  .hero-text h1 {
   .cta-section {
     padding: 60px 15px;
     margin-top: 0;
+  }
   .hero-text p {
     font-size: 0.9rem;
   }
