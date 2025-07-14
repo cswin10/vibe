@@ -960,6 +960,12 @@
 
 /* Mobile devices */
 @media (max-width: 500px) {
+  .footer-sections {
+    grid-template-columns: 1fr;
+  }
+  .footer-section {
+    border-right: none;
+  }
   .keepitreal-content {
     display: block !important;
     padding: 50px 32px 48px 32px;
